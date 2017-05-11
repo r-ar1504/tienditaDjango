@@ -21,5 +21,4 @@ urlpatterns = [
     url(r'^index/$', include('website.urls', namespace='website')),
 
 ]
-
-#Test Comment
+	
