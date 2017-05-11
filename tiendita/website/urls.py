@@ -4,3 +4,5 @@ from website.views import index
 urlpatterns = [
 	url(r'^$', index, name='index'),
 ]
+
+#Hola, Soy Benji
