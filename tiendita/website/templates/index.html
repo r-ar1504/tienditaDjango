@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>La Tiendita</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700i" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<a><li>MENÚ HOLA</li></a>
+				<a><li>NOVEDADES</li></a>
+				<li><img src="{% static 'img/logo.jpg' %}"></li>
+				<a><li>CONTACTO</li></a>
+				<a><li>GALERÍA</li></a>
+			</ul>
+		</nav>
+	</header>
+	<section style="height: 12.5%; width: 100%;"></section>
+	<section id="cover">
+		<div class="category-tile-row">
+			<a>
+			<div class="category-tile">
+				<img src="{% static 'img/platillos.jpeg' %}">
+				<h3 class="category-tile-desc">PLATILLOS</h3>
+			</div>
+			</a>
+			<a>
+			<div class="category-tile">
+				<img src="{% static 'img/bebidas.jpeg' %}">
+				<h3 class="category-tile-desc">BEBIDAS</h3>
+			</div>
+			</a>
+		</div>
+		<div class="category-tile-row">
+			<a>
+			<div class="category-tile">
+				<img src="{% static 'img/snacks.jpeg' %}">
+				<h3 class="category-tile-desc">SNACKS</h3>
+			</div>
+			</a>
+			<a>
+			<div class="category-tile">
+				<img src="{% static 'img/dulces.jpeg' %}">
+				<h3 class="category-tile-desc">DULCES</h3>
+			</div>
+			</a>
+		</div>
+	</section>
+	<section id="categorías">
+
+	</section>
+
+</body>
+</html>
