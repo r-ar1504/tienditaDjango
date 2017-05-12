@@ -127,27 +127,16 @@ nav ul li a img {
 	margin: 2.5% 12.5%;
 }
 
+/*Nav-bar */
 
+#navbar-container{
+	overflow: visible;
+}
 
+#navbar-container{
+	overflow: visible;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#logo{
+	margin-top: 20px;
+}
