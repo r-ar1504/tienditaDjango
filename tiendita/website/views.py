@@ -12,7 +12,7 @@ def product_index(request):
 	context = {}
 	return render(request, 'product-index.html', context)
 
-	#List items by tipo
+	#List items by type
 def listItems(request, tipo):
 	products = Producto.objects.all().filter(tipo = tipo)
 	context = {'products': products, 'tipo': tipo}

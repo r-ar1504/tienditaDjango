@@ -4,15 +4,24 @@
 	<meta charset="UTF-8">
 	<title>La Tiendita</title>
 	{% load staticfiles %}
+
+	<!--local css-->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700i" rel="stylesheet">
+
+	<!--jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!--Smooth scrolling-->
 	<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
 
 	<!-- Carousel -->
+	<!--bootstrap css-->
+	<!--bootstrap js-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<header>
@@ -28,8 +37,7 @@
 		 </div>
 		</nav>
 	</header>
-	<section id="relleno" style="height: 12.5%; width: 100%;"></section>
-<body>
+	<section id="relleno" style="height: 10%; width: 100%;"></section>
 	{% block body %}
 
 	{% endblock %}

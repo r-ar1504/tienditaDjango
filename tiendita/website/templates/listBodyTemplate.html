@@ -1,11 +1,30 @@
 {% extends 'navbar.html' %}
 
 {% block body %}
+{% load staticfiles %}
+
 <body>
-	<div class = "contentContainer">
-		<div id = "title_section">
-			<h1>Seccion {{tipoProducto}}</h1>
+		<div class = "listHeader">
+			<div class = "row">
+				<div class = "col-sm-6" id = "title_section">
+					<h1>{{tipo|capfirst}}</h1>
+				</div>
+			 <div class = "col-sm-6" id = "search_section">
+					<form>
+						<input type="text" class="form-control" placeholder="Buscar productos">
+					</form>
+			</div>
 		</div>
-	</div>
+		</div>
+		<div class = "listBody">
+			<div class = "row">
+				<div class = "col-sm-8">
+					<h2> Products </h2>
+				</div>
+				<div class = "col-sm-4">
+					<h2> Lateral Bar</h2>
+				</div>
+			</div>
+		</div>
 </body>
 {% endblock %}
