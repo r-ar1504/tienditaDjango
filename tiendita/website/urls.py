@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from website.views import *
 
 urlpatterns = [
-	#url(r'^(?P<tipo>[A-Z][a-z]+)/$',  menu, name='menu'),
-	url(r'^$', index, name='index'),
+	url(r'^products/', include('website.productUrls', namespace = 'products')),
+	url(r'^clients/', include('website.menuUrls', namespace = 'menu')),
+
 ]

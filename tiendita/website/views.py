@@ -1,11 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def menu_index(request):
+	context = {}
+	return render(request, 'menu-index.html', context)
+
+def product_index(request):
+	context = {}
+	return render(request, 'product-index.html', context)
 
 def index(request):
 	context = {}
 	return render(request, 'index.html', context)
-
-def menu(request, tipo):
-	context = {}
-	return render(request, 'menu.html', context)

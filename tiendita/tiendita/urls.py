@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from website.views import menu
+from website.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('website.urls', namespace='website')),
-    url(r'^menu/(?P<tipo>[A-Z][a-z]+)$',  menu, name='menu'),
-    
+    url(r'^$', index, name = "index"),
+    url(r'^products/', include('website.productUrls', namespace = 'products')),
+    url(r'^menu/', include('website.menuUrls', namespace = 'menu')),
+
 ]
-	
