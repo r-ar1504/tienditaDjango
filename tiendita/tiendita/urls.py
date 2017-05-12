@@ -1,5 +1,6 @@
 """tiendita URL Configuration
 
+
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
 Examples:
@@ -15,10 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from website.views import menu
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/$', include('website.urls', namespace='website')),
-
+    url(r'^$', include('website.urls', namespace='website')),
+    url(r'^menu/(?P<tipo>[A-Z][a-z]+)$',  menu, name='menu'),
+    
 ]
 	

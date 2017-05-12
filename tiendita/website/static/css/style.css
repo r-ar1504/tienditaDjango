@@ -64,7 +64,7 @@ nav ul li p:hover, nav ul a li:hover {
 	font-weight: bold;
 }
 
-nav ul li img {
+nav ul li a img {
 	width: 75%;
 	height: 100%;
 	padding-top: 0;
