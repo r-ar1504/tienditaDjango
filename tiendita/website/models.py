@@ -11,6 +11,7 @@ class Producto(models.Model):
 	tipo =  models.CharField(max_length=20, null=False)
 	descripcion = models.CharField(max_length=300, null=False)
 	precio = models.DecimalField(decimal_places=2, max_digits=5, null=False)
+	foto = models.FileField(null=True)
 
 	def __str__(self):
 		return '%s %s %s %s %i' % (self.nombre, self.tipo, self.descripcion, self.precio)

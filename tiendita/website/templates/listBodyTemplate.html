@@ -2,65 +2,70 @@
 
 {% block body %}
 {% load staticfiles %}
+
 <body>
-	<div id="content-holder">
 		<div class = "listHeader">
 			<div class = "row">
-				<div class = "col-sm-12" id = "title_section">
+				<div id = "title_section" class = "col-sm-6" >
 					<h1>{{tipo|capfirst}}</h1>
-					<form><input type = 'text' name = 'query'/></form>
+				</div>
+				 <div id = "search_section" class = "col-sm-6" >
+						<form>
+							<input type="text" class="form-control" placeholder="Buscar productos">
+						</form>
 				</div>
 			</div>
 		</div>
 		<div class = "listBody">
-			<div class = "row">
-				<div class = "col-sm-8">
-					<h2> Products </h2>
+			{% for producto in products %}
+				<div class="menu-item">
+					<section class="menu-item-name"><h3>{{producto.nombre}}</h3></section>
+					<section class="menu-item-top-right-corner">
+						<section class="menu-item-price"><h3>${{producto.precio}}</h3></section>
+						<section class="menu-item-button"><a href="">Comprar</a></section>
+					</section>
+					<img class="menu-item-img" src="{{producto.foto.url}}">
+					<section class="menu-item-desc"><p>{{producto.descripcion}}<p></section>
+					<!--div class="menu-item-admin-opts">
+						<div class="menu-item-edit"><a href="">Edit</a></div>
+						<div class="menu-item-delete"><a href="">Delete</a></div>
+					</div-->
+					 <!-- Delete Student  -->
+                    <form action="{% url 'menu:delete_item' producto.id %}" method="get" class="menu-item-delete">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{ producto.id }}" />
+                        <button type="submit" class="editBtn">Eliminar</button>
+                    </form>
+                    <!-- Update Student -->
+                    <form action="{% url 'menu:edit_item' producto.id %}" method="get" class="menu-item-edit">
+                        {% csrf_token %}
+                      <input type="hidden" name="id" value="{{ producto.id }}" />
+                        <button type="submit" class="editBtn">Editar</button>
+                    </form>
+
 				</div>
-				<div class = "col-sm-4">
-					<h2> Lateral Bar</h2>
-				</div>
-				<div class = "listHeader">
-					<div class = "row">
-						<div id = "title_section" class = "col-sm-6" >
-							<h1>{{tipo|capfirst}}</h1>
-						</div>
-						<div id = "search_section" class = "col-sm-6" >
-							<form>
-								<input type="text" class="form-control" placeholder="Buscar productos">
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class = "listBody">
-					{% for producto in products %}
-					<div class="menu-item">
-						<section class="menu-item-name"><h3>{{producto.nombre}}</h3></section>
-						<section class="menu-item-top-right-corner">
-							<section class="menu-item-price"><h3>${{producto.precio}}</h3></section>
-							<section class="menu-item-button"><a href="">Comprar</a></section>
-						</section>
-						<img class="menu-item-img" src="{% static 'img/mojito.jpg' %}">
-						<section class="menu-item-desc"><p>{{producto.descripcion}}<p></section>
-							<!--div class="menu-item-admin-opts">
-							<div class="menu-item-edit"><a href="">Edit</a></div>
-							<div class="menu-item-delete"><a href="">Delete</a></div>
-						</div-->
-						<!-- Delete Student  -->
-						<form action="{% url 'menu:delete_item' producto.id %}" method="get" class="menu-item-delete">
-							{% csrf_token %}
-							<input type="hidden" name="id" value="{{ producto.id }}" />
-							<button type="submit" class="editBtn">Eliminar</button>
-						</form>
-						<!-- Update Student -->
-						<form action="{% url 'menu:edit_item' producto.id %}" method="get" class="menu-item-edit">
-							{% csrf_token %}
-							<input type="hidden" name="id" value="{{ producto.id }}" />
-							<button type="submit" class="editBtn">Editar</button>
-						</form>
-					</div>
-					{% endfor %}
+			{% endfor %}
 
 
-				</body>
-				{% endblock %}
+			<!--div class="menu-item">
+				<section class="menu-item-name"><h3>Mojito Cubano Blah Blah Blah</h3></section>
+				<section class="menu-item-top-right-corner">
+					<section class="menu-item-price"><h3>$35.50</h3></section>
+					<section class="menu-item-button"><a href="">Comprar</a></section>
+				</section>
+				<img class="menu-item-img" src="{% static 'img/mojito.jpg' %}">
+				<section class="menu-item-desc"><p>Clásico mojito con ron, sprite, una pizca de azúcar y un toque de hierbabuena. Perfecto para refrescarte!<p></section>
+			</div>
+			<div class="menu-item">
+				<section class="menu-item-name"><h3>Mojito Cubano</h3></section>
+				<section class="menu-item-top-right-corner">
+					<section class="menu-item-price"><h3>$35.50</h3></section>
+					<section class="menu-item-button"><a href="">Comprar</a></section>
+				</section>
+				<img class="menu-item-img" src="{% static 'img/mojito.jpg' %}">
+				<section class="menu-item-desc"><p>Clásico mojito con ron, sprite, una pizca de azúcar y un toque de hierbabuena. Perfecto para refrescarte!<p></section>
+			</div-->
+			
+		</div>
+</body>
+{% endblock %}

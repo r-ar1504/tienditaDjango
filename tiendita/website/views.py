@@ -24,12 +24,12 @@ def listItems(request, tipo):
 	#Add item generic view
 class NewItem(CreateView):
 	model = Producto
-	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio']
+	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio', 'foto']
 
 	#Edit item generic view
 class EditItem(UpdateView):
 	model = Producto
-	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio']
+	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio', 'foto']
 
 	#Delete item generic view
 class DeleteItem(DeleteView):
