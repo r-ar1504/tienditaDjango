@@ -39,15 +39,15 @@
 		</div>
 	</section>
 
-	<section id="categorías">
+	<section id="categorias" name="categorias">
 		<div class="category-tile-row">
-			<a href="{% url 'products:list_items' 'platillos' %}">
+			<a href="{% url 'menu:list_items' 'platillos' %}">
 				<div class="category-tile">
-					<img src="{% static 'img/platillos.jpeg' %}">˝
+					<img src="{% static 'img/platillos.jpeg' %}">
 					<h3 class="category-tile-desc">PLATILLOS</h3>
 				</div>
 			</a>
-			<a href="{% url 'products:list_items' 'bebidas' %}">
+			<a href="{% url 'menu:list_items' 'bebidas' %}">
 				<div class="category-tile">
 					<img src="{% static 'img/bebidas.jpeg' %}">
 					<h3 class="category-tile-desc">BEBIDAS</h3>
@@ -55,13 +55,13 @@
 			</a>
 		</div>
 		<div class="category-tile-row">
-			<a href="{% url 'products:list_items' 'snacks' %}">
+			<a href="{% url 'menu:list_items' 'snacks' %}">
 				<div class="category-tile">
 					<img src="{% static 'img/snacks.jpeg' %}">
 					<h3 class="category-tile-desc">SNACKS</h3>
 				</div>
 			</a>
-			<a href="{% url 'products:list_items' 'dulces' %}">
+			<a href="{% url 'menu:list_items' 'dulces' %}">
 				<div class="category-tile">
 					<img src="{% static 'img/dulces.jpeg' %}">
 					<h3 class="category-tile-desc">DULCES</h3>

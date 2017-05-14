@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from django.core.urlresolvers import reverse
 from django.db import models
 from datetime import datetime
 
@@ -13,6 +14,9 @@ class Producto(models.Model):
 
 	def __str__(self):
 		return '%s %s %s %s %i' % (self.nombre, self.tipo, self.descripcion, self.precio)
+
+	def get_absolute_url(self):
+		return reverse('menu:new_item')
 
 class Cliente(models.Model):
 	id = models.CharField(max_length=50, null=False, primary_key=True)
