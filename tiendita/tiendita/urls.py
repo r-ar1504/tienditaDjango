@@ -24,6 +24,8 @@ from tiendita.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name = "index"),
+    url(r'^login/', login, name = 'login_page'),
+    url(r'^logout/', logout, name = 'logged_out_page'),
     url(r'^index_menu$', index_menu, name = "index_menu"),
     url(r'^products/', include('website.productUrls', namespace = 'products')),
     url(r'^menu/', include('website.menuUrls', namespace = 'menu')),
