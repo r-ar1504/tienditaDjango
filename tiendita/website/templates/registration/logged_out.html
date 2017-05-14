@@ -1,0 +1,43 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Usuario y contraseña erroneos, por favor intenta de nuevo.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>No tienes acceso a esta pagina.</p>
+    {% else %}
+    <p>Inicia sesión para acceder a esta pagina!.</p>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+{% csrf_token %}
+<table>
+<tr>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>{{ form.password.label_tag }}</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+
+<input type="submit" value="login" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}
+
+<!--Set on or off info panel for user-->
+<script type="text/javascript">
+
+{% if user.is_authenticated %}
+$("user_info").css("display","none");
+{% endif %}
+
+</script>
