@@ -25,3 +25,8 @@ def listItems(request, tipo):
 def index(request):
 	context = {}
 	return render(request, 'index.html', context)
+
+#---------------------------------------------------------Tiendita shopping cart.
+def shopping_cart(request):
+	context = {}
+	return render(request, 'shoppingCart.html', context)

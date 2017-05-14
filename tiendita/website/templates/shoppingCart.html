@@ -1,0 +1,73 @@
+{% extends 'navbar.html'%}
+{% block body %}
+
+<div class="conten-holder">
+  <div class="row">
+      <div class="col-sm-8" id="product-panel">
+        <div id="product-table">
+          <h1>Carrito de compras</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th></th>
+                <th></th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody><!--
+            {% for product in cart %}
+              <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.descripcion }}</td>
+                <td>{{ product.cantidad }}</td>
+                <td>{{ product.precio }}</td>
+              </tr>
+            {% endfor %}-->
+            <tr>
+              <td>Tacos</td>
+              <td><img src="https://forthefeelgooddotcom.files.wordpress.com/2015/09/photo-sep-27-6-39-50-pm.jpg" alt="taco" style="height: 100px; width: 100px;"></td>
+              <td> Comida tradicional mexicana acompañado de salsa</td>
+              <td>2</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>Tacos</td>
+              <td><img src="https://forthefeelgooddotcom.files.wordpress.com/2015/09/photo-sep-27-6-39-50-pm.jpg" alt="taco" style="height: 100px; width: 100px;"></td>
+              <td> Comida tradicional mexicana acompañado de salsa</td>
+              <td>2</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>Tacos</td>
+              <td><img src="https://forthefeelgooddotcom.files.wordpress.com/2015/09/photo-sep-27-6-39-50-pm.jpg" alt="taco" style="height: 100px; width: 100px;"></td>
+              <td> Comida tradicional mexicana acompañado de salsa</td>
+              <td>2</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>Tacos</td>
+              <td><img src="https://forthefeelgooddotcom.files.wordpress.com/2015/09/photo-sep-27-6-39-50-pm.jpg" alt="taco" style="height: 100px; width: 100px;"></td>
+              <td> Comida tradicional mexicana acompañado de salsa</td>
+              <td>2</td>
+              <td>45</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm-4" id="total-panel">
+          <div class="total-panel-item">
+              <h1>Total</h1>
+              <div id="confirm form">
+
+              </div>
+              <form class="checkout-form" action="#" method="post">
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
