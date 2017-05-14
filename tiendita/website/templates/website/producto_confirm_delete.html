@@ -1,0 +1,21 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+{% load staticfiles %}
+        <div class = "formHeader">
+            <div class = "row">
+                <div id = "title_section" >
+                    <h1>¿Eliminar Producto?</h1>
+                </div>
+            </div>
+        </div>
+        <div class="formBody">
+            <form action="" method="post">{% csrf_token %}
+                <p class="linea-confirmar">Seguro que quieres eliminar  
+                <strong>{{ producto.nombre }}</strong>?</p>
+                <p class="linea-confirmar">Si no quieres, haz click fuera del cuadro.</p>
+                <p  class="linea-confirmar">Si sí quieres, haz click en confirmar.</p>
+                <input class="formButton btn btn-success" type="submit" value="Confirmar" />
+            </form>
+        </div>
+{% endblock %}

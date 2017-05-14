@@ -1,4 +1,7 @@
+#-*- coding: utf-8-*-
 from django.shortcuts import render
+from django.core.urlresolvers import reverse_lazy
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import *
 
 #---------------------------------------------------------Menu & app views.
@@ -16,10 +19,23 @@ def product_index(request):
 def listItems(request, tipo):
 	products = Producto.objects.all().filter(tipo = tipo)
 	context = {'products': products, 'tipo': tipo}
-	print 'This is : %s' % (tipo)
-	for product in products:
-		print product.nombre
 	return render(request, 'listBodyTemplate.html', context)
+
+	#Add item generic view
+class NewItem(CreateView):
+	model = Producto
+	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio']
+
+	#Edit item generic view
+class EditItem(UpdateView):
+	model = Producto
+	fields = ['id', 'nombre', 'tipo', 'descripcion', 'precio']
+
+	#Delete item generic view
+class DeleteItem(DeleteView):
+	model = Producto
+	success_url = reverse_lazy('index')
+
 
 #---------------------------------------------------------Tiendita homepage.
 def index(request):

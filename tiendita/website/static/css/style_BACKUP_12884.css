@@ -1,21 +1,16 @@
 /** Google Fonts **/
 @import url('https://fonts.googleapis.com/css?family=Armata');
 
-*   {
-    font-size: 1em;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Slab', serif;
-}
 
 
 
 html {
+<<<<<<< HEAD
+    background-color: rgba(34,27,6,1);
+=======
 	height: 100%;
 	background-color: rgba(34,27,6,1);
+>>>>>>> e94a17389a04f12d5d974c6faf4dd843b8f11ea5
 }
 
 body {
@@ -81,9 +76,15 @@ nav ul li p:hover, nav ul a li:hover {
 }
 
 nav ul li a img {
+<<<<<<< HEAD
+    width: 75%;
+    height: 100%;
+    padding-top: 0;
+=======
 	width: 65%;
 	height: 75%;
 	padding-top: 0;
+>>>>>>> e94a17389a04f12d5d974c6faf4dd843b8f11ea5
 }
 
 #cover {
@@ -93,13 +94,21 @@ nav ul li a img {
     background-size: cover;
 }
 
-
+<<<<<<< HEAD
+#categorías {
+    width: 100%;
+    height: 87.5%;
+    background-color: rgba(69,41,36,1);
+    background-image: url("../img/wood.jpg");
+    background-size: cover;
+=======
 #categorias {
 	width: 100%;
 	height: 87.5%;
 	background-color: rgba(69,41,36,1);
 	background-image: url("../img/wood.jpg");
 	background-size: cover;
+>>>>>>> e94a17389a04f12d5d974c6faf4dd843b8f11ea5
 }
 
 .category-tile-row {
@@ -135,6 +144,15 @@ nav ul li a img {
 }
 
 .category-tile-desc {
+<<<<<<< HEAD
+    width: 75%;
+    height: auto;
+    text-align: center;
+    /*font-size: 2.5em;*/
+    font-size: 4vw;
+    color: white;
+    margin: 2.5% 12.5%;
+=======
 	width: 75%;
 	height: auto;
 	text-align: center;
@@ -142,10 +160,17 @@ nav ul li a img {
 	font-size: 4vw;
 	color: white;
 	margin: 3% 12.5% 0 12.5%;
+>>>>>>> e94a17389a04f12d5d974c6faf4dd843b8f11ea5
 }
 
 /*Nav-bar */
 
+#navbar-container{
+<<<<<<< HEAD
+    overflow: visible;
+=======
+	overflow: visible;
+}
 
 #navbar-container{
 	overflow: visible;
@@ -153,12 +178,14 @@ nav ul li a img {
 
 #logo{
 	margin-top: 10%;
+>>>>>>> e94a17389a04f12d5d974c6faf4dd843b8f11ea5
 }
 
 
 /*List products template*/
 
 .listHeader{
+<<<<<<< HEAD
     height: 15%;
     width: 100%;
     padding-top: 15px;
@@ -238,6 +265,7 @@ nav ul li a img {
 
 #product-table td:nth-child(2){
     float: left;
+=======
 	height: 10%;
 	width: 100%;
 	background-color: rgba(242, 242, 242, .7);
@@ -311,7 +339,7 @@ nav ul li a img {
 
 .menu-item-price h3 {
 	font-weight: bold;
-	margin: 0;
+	margin: 0; 
 }
 
 .menu-item-button {
@@ -413,7 +441,7 @@ nav ul li a img {
 	width: 40%;
 	height: auto;
 	margin-left: 30%;
-	margin-right: 30%;
+	margin-right: 30%; 
 }
 
 .formError {
@@ -449,7 +477,7 @@ nav ul li a img {
  	width: 40%;
  	height: auto;
  	margin-left: 30%;
-	margin-right: 30%;
+	margin-right: 30%; 
 	font-size: 2em;
 	text-align: center;
  }
@@ -457,3 +485,25 @@ nav ul li a img {
 .confirmarEliminar {
 	background-color: green;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
