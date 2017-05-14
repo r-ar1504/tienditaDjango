@@ -14,7 +14,7 @@ class Producto(models.Model):
 	foto = models.FileField(null=True)
 
 	def __str__(self):
-		return '%s %s %s %s %i' % (self.nombre, self.tipo, self.descripcion, self.precio)
+		return '%s %s %s %i' % (self.nombre, self.tipo, self.descripcion, self.precio)
 
 	def get_absolute_url(self):
 		return reverse('menu:new_item')

@@ -1,0 +1,41 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+{% load staticfiles %}
+
+<body>
+		<div class = "formHeader">
+			<div class = "row">
+				<div id = "title_section" >
+					<h1>Contacto</h1>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class = "formBody">
+			<form class="contactForm" action="" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.as_p}}
+				<!--div class="form-group">
+					<label class="formLabel">Asunto: </label>
+					<div class="formField"><input type="text" name="asunto"></div>
+				</div>
+				<div class="form-group">
+					<label class="formLabel">Nombre: </label>
+					<div class="formField"><input type="text" name="nombre"></div>
+				</div>
+				<div class="form-group">
+					<label class="formLabel">E-Mail: </label>
+					<div class="formField"><input type="email" name="nombre"></div>
+				</div>
+				<div class="form-group">
+					<label class="formLabel">Mensaje: </label>
+					<div class="formText"><textarea rows=20 name="mensaje"></textarea></div>
+				</div -->
+				<div class="formButton">
+					<button type="submit" class="btn btn-success">Enviar</button>
+				</div>
+			</form>
+		</div>
+</body>
+{% endblock %}

@@ -10,13 +10,14 @@
 					<h1>{{tipo|capfirst}}</h1>
 				</div>
 				 <div id = "search_section" class = "col-sm-6" >
-						<form>
-							<input type="text" class="form-control" placeholder="Buscar productos">
+						<form action="/menu/{{tipo}}/search" role="search" method="get">
+							<input type="text" class="form-control" placeholder="Buscar productos" name="q" value="{{ request.GET.q }}">
 						</form>
 				</div>
 			</div>
 		</div>
 		<div class = "listBody">
+			<div class="top-opt-div"><a href="{% url 'menu:new_item' %}">+ Agregar Producto</a></div>
 			{% for producto in products %}
 				<div class="menu-item">
 					<section class="menu-item-name"><h3>{{producto.nombre}}</h3></section>
@@ -30,6 +31,8 @@
 						<div class="menu-item-edit"><a href="">Edit</a></div>
 						<div class="menu-item-delete"><a href="">Delete</a></div>
 					</div-->
+
+
 					 <!-- Delete Student  -->
                     <form action="{% url 'menu:delete_item' producto.id %}" method="get" class="menu-item-delete">
                         {% csrf_token %}

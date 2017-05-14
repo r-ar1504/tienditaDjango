@@ -158,6 +158,13 @@ nav ul li a img {
 
 /*List products template*/
 
+.top-opt-div {
+	width: 100%;
+	height: 40px;
+	padding-right: 5%;
+	text-align: right;
+}
+
 .listHeader{
 	height: 10%;
 	width: 100%;
@@ -357,12 +364,67 @@ nav ul li a img {
 	float: right;
 }
 
+.formText {
+	width: 80%;
+	height: 150px;
+	display: inline-block;
+	float: right;
+	margin-bottom: 5%;
+}
+
+textarea {
+	height: 100%;
+	resize: none;
+	border-color: lightgray;
+}
+
 .formButton {
 	width: 40%;
 	height: 30px;
 	margin-left: 30%;
 	margin-right: 30%;
 }
+
+.contactForm {
+	width: 100%;
+}
+
+.contactForm p {
+	width: 40%;
+	height: 50px;
+	margin-left: 30%;
+}
+
+.contactForm p label{
+	width: 30%;
+	height: 50px;
+	padding-right: 5%;
+	display: inline-block;
+	text-align: right;
+	font-size: 1.5em;
+}
+
+.contactForm p input{
+	width: 70%;
+	height: 10px;
+	display: inline-block;
+	float: right;
+	height: 50px
+}
+
+.contactForm p textarea{
+	width: 70%;
+	display: inline-block;
+	float: right;
+	height: 150px;
+	margin-bottom: 5%;
+}
+
+.contactForm p input[type="submit"] {
+	width: 400px;
+}
+
+
 
 /* Delete  */
  .linea-confirmar {
